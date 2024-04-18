@@ -8,12 +8,13 @@ import { MdOutlineAutoGraph } from "react-icons/md";
 import { IoPlayBackOutline } from "react-icons/io5";
 import { TbAlarmSnoozeFilled } from "react-icons/tb";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
-
+import hero from '../assets/hero.png'
 
 function Navbar() {
   return (
     <div className="h-auto p-1 flex justify-between z-10 items-center w-full">
       <div className="flex justify-center text-xl font-thin gap-3 ">
+      <img className="h-14 w-14" src={hero}/>
         <div className="rounded-full bg-stone-50 text-white  text-3xl bg-opacity-10 h-fit p-3 flex flex-col justify-evenly items-center ">
           <CiSearch />
         </div>
