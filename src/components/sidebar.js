@@ -98,7 +98,7 @@ function Sidebar() {
           </div>
         </div>
       </div>
-      <div className="w-[80%] p-3 bg-stone-100 flex text-stone-100 flex-col justify-evenly gap-2 bg-opacity-10 rounded-3xl">
+      <div className="w-[80%] hover:scale-105 transition-all duration-300 p-3 bg-stone-100 flex text-stone-100 flex-col justify-evenly gap-2 bg-opacity-10 rounded-3xl">
         <div className="flex justify-between px-3 items-center">
           <div className="text-2xl font-nirmal">Day Range</div>
           <div className="p-3 text-3xl bg-stone-800 flex justify-center items-center rounded-full">
@@ -120,7 +120,7 @@ function Sidebar() {
           </div>
         </div>
       </div>
-      <div className="w-[80%] p-3 bg-stone-100 flex text-stone-100 flex-col justify-evenly gap-2 bg-opacity-10 rounded-3xl">
+      <div className="w-[80%] hover:scale-105 transition-all duration-300 p-3 bg-stone-100 flex text-stone-100 flex-col justify-evenly gap-2 bg-opacity-10 rounded-3xl">
         <div className="flex justify-between px-3 items-center">
           <div className="text-2xl font-nirmal">Notes</div>
           <div className="flex gap-2">
@@ -145,7 +145,7 @@ function Sidebar() {
           </div>
         </div>
       </div>
-      <div className="w-[80%] p-3 bg-stone-100 flex text-stone-100 flex-col justify-evenly gap-2 bg-opacity-10 rounded-3xl">
+      <div className="w-[80%] hover:scale-105 transition-all duration-300 p-3 bg-stone-100 flex text-stone-100 flex-col justify-evenly gap-2 bg-opacity-10 rounded-3xl">
         <div className="flex justify-between px-3 items-center">
           <div className="text-2xl font-nirmal">Notes</div>
           <div className="flex gap-2">
