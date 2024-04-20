@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { FaTags } from "react-icons/fa";
-import { BsPlus } from "react-icons/bs";
+import { FaTags, FaPlus } from "react-icons/fa";
+import { BsPlus, BsArrowUpRight } from "react-icons/bs";
 import { PiDotsThreeOutlineVerticalThin } from "react-icons/pi";
-import { FaBitcoin, FaPlus } from "react-icons/fa6";
-import { BsArrowUpRight } from "react-icons/bs";
+import { FaBitcoin } from "react-icons/fa6";
+import AOS from "aos"; // Import AOS
+import "aos/dist/aos.css"; // Import AOS CSS
 
 function Sidebar() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should only happen once
+    });
+  });
   return (
     <div className="w-full text-yellow-300 h-full flex flex-col justify-start gap-2 items-start">
       <div className="w-full flex justify-between  ">
@@ -98,7 +105,7 @@ function Sidebar() {
           </div>
         </div>
       </div>
-      <div className="w-[80%] hover:scale-105 transition-all duration-300 p-3 bg-stone-100 flex text-stone-100 flex-col justify-evenly gap-2 bg-opacity-10 rounded-3xl">
+      <div data-aos="fade-left"  className="w-[80%] hover:scale-105 transition-all duration-300 p-3 bg-stone-100 flex text-stone-100 flex-col justify-evenly gap-2 bg-opacity-10 rounded-3xl">
         <div className="flex justify-between px-3 items-center">
           <div className="text-2xl font-nirmal">Day Range</div>
           <div className="p-3 text-3xl bg-stone-800 flex justify-center items-center rounded-full">
@@ -120,7 +127,7 @@ function Sidebar() {
           </div>
         </div>
       </div>
-      <div className="w-[80%] hover:scale-105 transition-all duration-300 p-3 bg-stone-100 flex text-stone-100 flex-col justify-evenly gap-2 bg-opacity-10 rounded-3xl">
+      <div data-aos="fade-left"  className="w-[80%] hover:scale-105 transition-all duration-300 p-3 bg-stone-100 flex text-stone-100 flex-col justify-evenly gap-2 bg-opacity-10 rounded-3xl">
         <div className="flex justify-between px-3 items-center">
           <div className="text-2xl font-nirmal">Notes</div>
           <div className="flex gap-2">

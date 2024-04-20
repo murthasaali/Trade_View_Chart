@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css"; // Corrected import statement
 import ChartWithTooltip from "./components/chartWithTooltip";
 import Navbar from "./components/navbar";
@@ -6,15 +6,27 @@ import Sidebar from "./components/sidebar";
 import ChartDideBar from "./components/chartDideBar";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Player } from "@lottiefiles/react-lottie-player";
+import AOS from "aos"; // Import AOS
+import "aos/dist/aos.css"; // Import AOS CSS
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should only happen once
+    });
+  });
+
   return (
     <div className="h-auto p-4 w-full bg-black gap-4 flex flex-col items-start justify-center">
       <Navbar />
       {/* <ChartWithButtons /> */}
 
       <div className="w-full flex justify-between   ">
-        <div className=" p-4 md:w-[70%] w-full h-[400px] md:h-[600px]  rounded-3xl relative">
+        <div
+          className="p-4 md:w-[70%] w-full h-[400px] md:h-[600px]  rounded-3xl relative"
+          data-aos="fade-up" // Example AOS attribute
+        >
           <div className="backdrop-blur-sm top-0 left-[-10px] absolute w-20 h-auto z-50">
             <ChartDideBar />
           </div>
@@ -33,14 +45,15 @@ function App() {
           </div>
 
           <ChartWithTooltip />
-          <div className="bg-stone- border rounded-lg bg-opacity-80 p-4 w-[100%]">
-            <h1 className="text-2xl font-bold text-white">Your Trade View</h1>
-            <h1 className="text-xs font-thin w-[100%] text-white">
-              "Trading in financial markets carries a high level of risk to your
-              capital. You should only trade with money you can afford to lose.
-              Past performance is not indicative of future results."
-            </h1>
-          </div>
+          <div className="bg-stone- border rounded-lg bg-opacity-80 p-4 w-[100%]" data-aos="fade-up">
+  <h1 className="text-2xl font-bold text-white">Your Trade View</h1>
+  <h1 className="text-xs font-thin w-[100%] text-white">
+    "Trading in financial markets carries a high level of risk to your
+    capital. You should only trade with money you can afford to lose.
+    Past performance is not indicative of future results."
+  </h1>
+</div>
+
         </div>
         <div className="  w-[28%] hidden md:flex rounded-3xl">
           <Sidebar />
